@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Lumière - カフェルミエール</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #faf8f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #8b7355 0%, #6b5444 100%);
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            letter-spacing: 0.1em;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #6b5444;
+            letter-spacing: 0.1em;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(107, 84, 68, 0.3), rgba(107, 84, 68, 0.3)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23c9b8a8" width="1200" height="600"/><text x="50%" y="50%" text-anchor="middle" fill="%23fff" font-size="60" font-family="sans-serif">カフェの雰囲気</text></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .hero-text {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .menu-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .menu-item-name {
+            font-size: 1.3rem;
+            color: #6b5444;
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-item-price {
+            font-size: 1.1rem;
+            color: #8b7355;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .menu-item-desc {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info-item h3 {
+            font-size: 1.1rem;
+            color: #6b5444;
+            margin-bottom: 0.8rem;
+        }
+        
+        .info-item p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            background: #6b5444;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: #8b7355;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background 0.3s;
+        }
+        
+        .back-link:hover {
+            background: #6b5444;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero-text {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Café Lumière</h1>
+        <p class="tagline">カフェルミエール</p>
+    </header>
+    
+    <div class="hero">
+        <h2 class="hero-text">心安らぐひとときを</h2>
+    </div>
+    
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Menu</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3 class="menu-item-name">ブレンドコーヒー</h3>
+                        <p class="menu-item-price">¥450</p>
+                        <p class="menu-item-desc">厳選した豆を丁寧に焙煎。深い香りと豊かなコクをお楽しみください。</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item-name">カフェラテ</h3>
+                        <p class="menu-item-price">¥520</p>
+                        <p class="menu-item-desc">エスプレッソにたっぷりのスチームミルク。まろやかな味わいが人気です。</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item-name">季節のケーキセット</h3>
+                        <p class="menu-item-price">¥780</p>
+                        <p class="menu-item-desc">旬の素材を使った自家製ケーキとドリンクのセット。</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item-name">パンケーキ</h3>
+                        <p class="menu-item-price">¥850</p>
+                        <p class="menu-item-desc">ふわふわの生地に季節のフルーツとホイップクリームを添えて。</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item-name">サンドイッチプレート</h3>
+                        <p class="menu-item-price">¥950</p>
+                        <p class="menu-item-desc">具材たっぷりのサンドイッチにサラダとスープが付きます。</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item-name">スムージー</h3>
+                        <p class="menu-item-price">¥580</p>
+                        <p class="menu-item-desc">新鮮なフルーツと野菜を使ったヘルシーな一杯。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" style="background: #fff;">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto; color: #666; line-height: 1.8;">
+                    Café Lumièreは、光あふれる落ち着いた空間で、<br>
+                    心からくつろげるひとときをお届けします。<br>
+                    厳選した素材を使った料理とドリンクで、<br>
+                    皆様をお待ちしております。
+                </p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>営業時間</h3>
+                        <p>
+                            平日：10:00 - 20:00<br>
+                            土日祝：9:00 - 21:00<br>
+                            定休日：月曜日
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <h3>アクセス</h3>
+                        <p>
+                            〒123-4567<br>
+                            東京都渋谷区○○1-2-3<br>
+                            JR○○駅 徒歩5分
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <h3>お問い合わせ</h3>
+                        <p>
+                            TEL: 03-1234-5678<br>
+                            Email: info@cafe-lumiere.jp<br>
+                            ご予約承ります
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div style="text-align: center;">
+            <a href="index.html#samples" class="back-link">← トップページに戻る</a>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2026 Café Lumière. All rights reserved.</p>
+    </footer>
+</body>
+</html>
