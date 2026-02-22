@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>鹿児島 塗装工事なら【コダマ建築塗装】屋根・外壁塗装・防水工事 | 鹿屋市・垂水市・志布志市対応</title>
   <meta name="description" content="鹿児島県の総合塗装工事はコダマ建築塗装へ。屋根塗装・外壁塗装・コーキング・防水工事・各種吹付・リフォームに対応。塀や門扉など小規模工事もOK。お見積もり完全無料。鹿屋市・垂水市・志布志市・曽於市など鹿児島南部全域に対応。">
   <meta name="keywords" content="塗装工事,屋根塗装,外壁塗装,鹿児島,鹿屋市,垂水市,志布志市,コーキング,防水工事,吹付,リフォーム,無料見積もり,コダマ建築塗装">
@@ -16,9 +15,7 @@
   <meta property="og:locale"      content="ja_JP">
   <meta name="twitter:card"       content="summary_large_image">
   <meta name="twitter:image"      content="https://kodama-tosou.com/images/ogp.jpg">
-  <link rel="canonical"        href="https://kodama-tosou.com/">
-  <link rel="icon"             href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="canonical" href="https://kodama-tosou.com/">
 
   <script type="application/ld+json">
   {
@@ -48,11 +45,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-  <!-- ============================================================
-       スタイルシート（css/style.css と同じ内容）
-       実際のサーバー運用時は <link rel="stylesheet" href="css/style.css"> に切り替えOK
-  ============================================================ -->
   <style>
+/* ========================================
+   リセット・変数
+======================================== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -68,7 +64,9 @@
 html { scroll-behavior: auto; }
 body { background: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; }
 
-/* ===== HEADER ===== */
+/* ========================================
+   ヘッダー
+======================================== */
 header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 500;
   height: var(--header-h); padding: 0 48px;
@@ -89,14 +87,18 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .pc-nav .cta::after { display: none !important; }
 .pc-nav .cta:hover { background: #c94a1e !important; }
 
-/* ===== HAMBURGER ===== */
+/* ========================================
+   ハンバーガーメニュー
+======================================== */
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 600; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: center; }
 .hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.is-open span:nth-child(2) { opacity: 0; }
 .hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ===== SP MENU ===== */
+/* ========================================
+   スマホメニュー
+======================================== */
 .sp-menu { position: fixed; inset: 0; z-index: 550; background: rgba(10,10,10,0.98); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s ease; overflow-y: auto; }
 .sp-menu.is-open { opacity: 1; visibility: visible; }
 .sp-menu-item { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.07); }
@@ -108,15 +110,14 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .sp-menu .sp-menu-cta .arr { display: none; }
 .sp-menu-logo { margin-top: 40px; margin-bottom: 32px; text-align: center; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 4px; color: rgba(232,92,44,0.3); }
 
-/* ===== HERO ===== */
+/* ========================================
+   ヒーロー
+======================================== */
 .hero { min-height: 100svh; display: flex; align-items: center; position: relative; overflow: hidden; padding: calc(var(--header-h) + 60px) 48px 80px; }
 .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(232,92,44,0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(240,165,0,0.07) 0%, transparent 50%); }
 .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 60px 60px; }
 .hero-photo { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.18; }
-
-/* ★PAINT YOUR WORLD の位置 */
 .hero-content { position: relative; z-index: 2; max-width: 860px; margin-left: 14vw; }
-
 .hero-badge { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(232,92,44,0.4); padding: 7px 16px; margin-bottom: 32px; font-size: 11px; letter-spacing: 3px; color: var(--accent); opacity: 0; transform: translateY(16px); animation: fadeUp 0.7s 0.2s forwards; }
 .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: blink 1.5s infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
@@ -135,21 +136,27 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .hero-bg-num { position: absolute; right: 40px; bottom: 20px; font-family: 'Bebas Neue', sans-serif; font-size: 160px; line-height: 1; color: rgba(255,255,255,0.025); pointer-events: none; user-select: none; }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-/* ===== 共通セクション ===== */
+/* ========================================
+   共通セクション
+======================================== */
 .section-inner { max-width: 1200px; margin: 0 auto; }
 .sec { padding: 96px 48px; }
 .section-label { font-size: 11px; letter-spacing: 4px; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; }
 .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px, 6vw, 76px); line-height: 1; letter-spacing: 2px; margin-bottom: 20px; }
 .section-sub { color: var(--text-light); font-size: 15px; line-height: 2; max-width: 520px; margin-bottom: 52px; }
 
-/* ===== STRIP ===== */
+/* ========================================
+   流れるテキスト帯
+======================================== */
 .strip { background: var(--accent); overflow: hidden; }
 .strip-inner { display: flex; animation: marquee 22s linear infinite; white-space: nowrap; }
 .strip-item { display: inline-flex; align-items: center; gap: 18px; padding: 16px 44px; font-family: 'Bebas Neue', sans-serif; font-size: 19px; letter-spacing: 3px; flex-shrink: 0; }
 .strip-item::after { content: '//'; opacity: 0.45; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ===== SERVICES ===== */
+/* ========================================
+   事業内容
+======================================== */
 .services-bg { background: var(--gray); }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
 .svc-card { background: var(--black); padding: 44px 32px; position: relative; overflow: hidden; transition: background 0.4s; }
@@ -157,12 +164,15 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .svc-card:hover { background: var(--gray2); }
 .svc-card:hover::before { height: 100%; }
 .svc-num { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; color: rgba(255,255,255,0.05); margin-bottom: 12px; display: block; }
-.svc-icon { width: 46px; height: 46px; margin-bottom: 18px; background: rgba(232,92,44,0.1); border: 1px solid rgba(232,92,44,0.2); display: flex; align-items: center; justify-content: center; font-size: 20px; transition: background 0.3s, border-color 0.3s; }
-.svc-card:hover .svc-icon { background: rgba(232,92,44,0.2); border-color: var(--accent); }
+.svc-img-wrap { width: 100%; aspect-ratio: 16/9; margin-bottom: 20px; overflow: hidden; position: relative; background: var(--gray2); }
+.svc-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.svc-card:hover .svc-img-wrap img { transform: scale(1.06); }
 .svc-name { font-size: 17px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
 .svc-desc { font-size: 13px; line-height: 1.9; color: var(--text-light); font-weight: 300; }
 
-/* ===== WORKS ===== */
+/* ========================================
+   施工事例
+======================================== */
 .works-bg { background: var(--black); }
 .wk-row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-bottom: 4px; }
 .wk-row-2 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
@@ -188,7 +198,9 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .wbg5 { background: linear-gradient(135deg,#0a0a1e,#101028); }
 .wbg6 { background: linear-gradient(135deg,#1e0a1a,#2e1028); }
 
-/* ===== ABOUT ===== */
+/* ========================================
+   会社紹介
+======================================== */
 .about-bg { background: var(--black); }
 .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .about-visual { position: relative; aspect-ratio: 4/5; background: var(--gray2); overflow: hidden; }
@@ -205,7 +217,9 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .apoint h4 { font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 3px; }
 .apoint p { font-size: 13px; color: var(--text-light); }
 
-/* ===== SMALL WORKS ===== */
+/* ========================================
+   小規模工事
+======================================== */
 .small-bg { background: var(--gray); text-align: center; }
 .small-box { max-width: 780px; margin: 52px auto 0; border: 1px solid rgba(232,92,44,0.28); padding: 52px 48px; position: relative; }
 .small-box::before, .small-box::after { content: ''; position: absolute; width: 28px; height: 28px; }
@@ -217,14 +231,18 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .stag { border: 1px solid rgba(255,255,255,0.15); padding: 7px 18px; font-size: 13px; letter-spacing: 1px; transition: border-color 0.3s, color 0.3s; }
 .stag:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ===== ESTIMATE ===== */
+/* ========================================
+   無料見積もり帯
+======================================== */
 .estimate-bg { background: var(--accent); text-align: center; padding: 72px 48px; }
 .estimate-bg h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 8vw, 86px); letter-spacing: 3px; line-height: 1; margin-bottom: 14px; }
 .estimate-bg p { font-size: 15px; font-weight: 300; letter-spacing: 3px; opacity: 0.85; margin-bottom: 36px; }
 .btn-white { display: inline-flex; align-items: center; gap: 10px; background: var(--white); color: var(--accent); text-decoration: none; padding: 16px 44px; font-size: 14px; letter-spacing: 3px; font-weight: 700; transition: transform 0.2s, box-shadow 0.3s; cursor: pointer; }
 .btn-white:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,0.2); }
 
-/* ===== CONTACT ===== */
+/* ========================================
+   お問い合わせ
+======================================== */
 .contact-bg { background: var(--gray); }
 .contact-wrap { max-width: 680px; margin: 0 auto; padding: 96px 48px; }
 .contact-lead { color: var(--text-light); font-size: 14px; line-height: 2; margin-bottom: 44px; }
@@ -240,7 +258,9 @@ header.scrolled { background: rgba(10,10,10,0.97); box-shadow: 0 1px 0 rgba(255,
 .f-note { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 14px; letter-spacing: 1px; }
 #f-success { display: none; text-align: center; padding: 40px; background: rgba(232,92,44,0.08); border: 1px solid rgba(232,92,44,0.3); color: var(--accent); font-size: 16px; letter-spacing: 2px; line-height: 2; }
 
-/* ===== FOOTER ===== */
+/* ========================================
+   フッター
+======================================== */
 footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgba(255,255,255,0.05); }
 .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 36px; margin-bottom: 52px; }
 .footer-brand .f-logo-en { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 4px; color: var(--accent); }
@@ -254,12 +274,16 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 .footer-address a { color: var(--text-light); text-decoration: none; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 11px; color: var(--text-light); letter-spacing: 1px; }
 
-/* ===== アニメーション ===== */
+/* ========================================
+   スクロールアニメーション
+======================================== */
 .rev { opacity: 0; transform: translateY(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .rev.in { opacity: 1; transform: translateY(0); }
 .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s} .d4{transition-delay:.4s}
 
-/* ===== レスポンシブ ===== */
+/* ========================================
+   スマホ対応
+======================================== */
 @media (max-width: 768px) {
   :root { --header-h: 58px; }
   header { padding: 0 20px; }
@@ -300,10 +324,11 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </head>
 <body>
 
+<!-- ヘッダー -->
 <header id="header">
   <a class="logo" data-target="hero" aria-label="コダマ建築塗装 トップへ">
-    <span class="logo-en">KODAMA</span><!-- ★ロゴ文字変更可 -->
-    <span class="logo-jp">コダマ建築塗装</span><!-- ★会社名変更可 -->
+    <span class="logo-en">KODAMA</span>
+    <span class="logo-jp">コダマ建築塗装</span>
   </a>
   <nav class="pc-nav" aria-label="メインナビゲーション">
     <a data-target="services">事業内容</a>
@@ -317,6 +342,7 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
   </button>
 </header>
 
+<!-- スマホメニュー -->
 <nav class="sp-menu" id="spMenu" role="dialog" aria-label="スマートフォン用メニュー">
   <div class="sp-menu-item"><a data-target="services"><span>事業内容</span><span class="arr">→</span></a></div>
   <div class="sp-menu-item"><a data-target="works"><span>施工事例</span><span class="arr">→</span></a></div>
@@ -327,20 +353,31 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </nav>
 
 
-<!-- ============================================================ HERO ============================================================ -->
+<!-- ============================================================
+  ヒーローセクション
+
+  【画像①：ヒーロー背景写真】
+  下の style="background-image: url('images/○○.jpg');"
+  の「○○」の部分をファイル名に書き換えてください。
+
+  例）
+  url('images/240_F_537569943_bkFz2JARTbMvZNtjqzgtUfeCZQNWgClP.jpg')
+============================================================ -->
 <section id="hero" aria-label="メインビジュアル">
   <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
-    <!-- ★背景写真: このコメントを外してsrcを変更 → <div class="hero-photo" style="background-image:url('images/hero.jpg');"></div> -->
+
+    <div class="hero-photo" style="background-image: url('images/ここをファイル名に変える.jpg');"></div>
+
     <div class="hero-content">
       <div class="hero-badge">総合塗装工事</div>
-      <h1 class="hero-title">PAINT<br><span>YOUR</span><br>WORLD</h1><!-- ★キャッチコピー変更可 -->
+      <h1 class="hero-title">PAINT<br><span>YOUR</span><br>WORLD</h1>
       <p class="hero-subtitle">コダマ建築塗装</p>
       <p class="hero-desc">
         鹿児島県の屋根・外壁塗装専門店。<br>
         フェンス・門扉など小さな工事も対応します。<br>
-        <strong>お見積もりは無料。</strong>お気軽にご相談ください。<!-- ★テキスト変更可 -->
+        <strong>お見積もりは無料。</strong>お気軽にご相談ください。
       </p>
       <div class="hero-btns">
         <a class="btn-primary"   data-target="contact">無料お見積もり →</a>
@@ -352,7 +389,7 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
   </div>
 </section>
 
-
+<!-- 流れるテキスト帯 -->
 <div class="strip" aria-hidden="true">
   <div class="strip-inner">
     <span class="strip-item">屋根塗装</span><span class="strip-item">外壁塗装</span>
@@ -367,7 +404,7 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </div>
 
 
-<!-- ============================================================ SERVICES ============================================================ -->
+<!-- 事業内容（写真なし） -->
 <section id="services" class="sec services-bg" aria-labelledby="services-heading">
   <div class="section-inner">
     <p class="section-label rev">Services</p>
@@ -376,37 +413,49 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
     <div class="services-grid">
       <article class="svc-card rev">
         <span class="svc-num" aria-hidden="true">01</span>
-        <div class="svc-icon" aria-hidden="true">🏠</div>
+        <div class="svc-img-wrap">
+          <img src="images/240_F_268786245_5rHGpKirZYnvWc3thcCaGtGMJoEDR7xN.jpg" alt="屋根塗装の施工風景">
+        </div>
         <h3 class="svc-name">屋根塗装</h3>
         <p class="svc-desc">紫外線・雨風から屋根を守ります。劣化が進む前に適切なメンテナンスで建物の寿命を延ばします。スレート・トタン・瓦など各種対応。</p>
       </article>
       <article class="svc-card rev d1">
         <span class="svc-num" aria-hidden="true">02</span>
-        <div class="svc-icon" aria-hidden="true">🏗️</div>
+        <div class="svc-img-wrap">
+          <img src="images/240_F_495890739_imCGrUsEqEUGyi8NXfnI0trorE49Pqal.jpg" alt="外壁塗装の施工風景">
+        </div>
         <h3 class="svc-name">外壁塗装</h3>
         <p class="svc-desc">建物の美観を保ちながら外壁をしっかり保護。雨水の侵入や汚れ・カビを防ぎ、建物の資産価値を維持します。</p>
       </article>
       <article class="svc-card rev d2">
         <span class="svc-num" aria-hidden="true">03</span>
-        <div class="svc-icon" aria-hidden="true">🔧</div>
+        <div class="svc-img-wrap">
+          <img src="images/240_F_478233385_G1OgJ8EjM5cR5OUgYyX33NgcJpBMDad6.jpg" alt="コーキング施工風景">
+        </div>
         <h3 class="svc-name">コーキング</h3>
         <p class="svc-desc">外壁目地や窓周りのコーキングを打ち替え・増し打ち。雨漏りや隙間風の原因を解消し、建物の気密性を高めます。</p>
       </article>
       <article class="svc-card rev">
         <span class="svc-num" aria-hidden="true">04</span>
-        <div class="svc-icon" aria-hidden="true">💨</div>
+        <div class="svc-img-wrap">
+          <img src="images/240_F_282453157_9H4BdhlIxVdhiPdXsZTpFlt4OnOgn3xm.jpg" alt="各種吹付の施工風景">
+        </div>
         <h3 class="svc-name">各種吹付</h3>
         <p class="svc-desc">スプレーガンを用いた吹付塗装で均一で美しい仕上がりを実現。倉庫・工場・広面積の施設にも対応します。</p>
       </article>
       <article class="svc-card rev d1">
         <span class="svc-num" aria-hidden="true">05</span>
-        <div class="svc-icon" aria-hidden="true">💧</div>
+        <div class="svc-img-wrap">
+          <img src="images/240_F_608544274_8QWqVy8zvC5oTipmq5txwWczwrfxI1uT.jpg" alt="防水工事の施工風景">
+        </div>
         <h3 class="svc-name">防水工事</h3>
         <p class="svc-desc">バルコニー・屋上・ベランダなどの防水処理。ウレタン防水・シート防水など工法を選んで雨漏りを確実に防ぎます。</p>
       </article>
       <article class="svc-card rev d2">
         <span class="svc-num" aria-hidden="true">06</span>
-        <div class="svc-icon" aria-hidden="true">✨</div>
+        <div class="svc-img-wrap">
+          <img src="images/240_F_595454703_mzPuC3KjFIcqNYzUXTbizYiwJbWMVMLH.jpg" alt="リフォーム施工のビフォーアフター">
+        </div>
         <h3 class="svc-name">リフォーム</h3>
         <p class="svc-desc">塗装工事と合わせた内外装リフォームにも対応。築年数が経った建物でもきれいに生まれ変わらせます。</p>
       </article>
@@ -415,11 +464,20 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </section>
 
 
-<!-- ============================================================ WORKS ============================================================
-     ★写真の入れ方: 各カード内のコメントを外して src を変更
-       例: <img class="wk-img" src="images/works-roof-01.jpg" alt="K様邸 屋根塗装施工後写真（鹿屋市）">
-       1行目推奨サイズ: 800×600px  2行目推奨サイズ: 960×540px
-     ★工事名・詳細 → wk-title / wk-sub の中を書き換え
+<!-- ============================================================
+  施工事例セクション
+
+  【画像②〜⑦：施工事例写真】
+  各カードの src="images/○○.jpg" の「○○」を書き換えてください。
+  書き換える場所は全部で6ヶ所あります。
+
+  推奨する写真の割り当て：
+  ②屋根塗装    → 屋根で作業している職人の写真
+  ③外壁塗装    → ローラーで外壁を塗っている写真
+  ④防水工事    → 屋根に黒い塗料を塗っている写真
+  ⑤コーキング  → 足場や外壁での作業写真
+  ⑥各種吹付    → スプレーガンを使っている写真
+  ⑦リフォーム  → Before/Afterのイラスト写真
 ============================================================ -->
 <section id="works" class="sec works-bg" aria-labelledby="works-heading">
   <div class="section-inner">
@@ -427,23 +485,23 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
     <h2 class="section-title rev d1" id="works-heading">施工事例</h2>
     <p class="section-sub rev d2">これまでに手がけた施工の一部をご紹介します。どんな建物でもお気軽にご相談ください。</p>
 
-    <!-- 1行目：3枚（4:3） -->
+    <!-- 1行目：3枚 -->
     <div class="wk-row-3">
+      <!-- 【画像②】屋根塗装 -->
       <article class="wk-card rev">
         <div class="wk-bg wbg1">
-          <!-- <img class="wk-img" src="images/works-roof-01.jpg" alt="K様邸 スレート屋根塗装の施工後写真（鹿屋市）"> -->
-          <div class="wk-icon" aria-hidden="true"><span class="wi">🏠</span><span class="wl">ROOFING</span></div>
+          <img class="wk-img" src="images/240_F_268786245_5rHGpKirZYnvWc3thcCaGtGMJoEDR7xN.jpg" alt="K様邸 屋根塗装">
         </div>
         <div class="wk-overlay">
           <span class="wk-tag">屋根塗装</span>
-          <div class="wk-title">K様邸 屋根全面塗装</div><!-- ★工事名 -->
-          <div class="wk-sub">スレート屋根 / フッ素系塗料 / 120㎡</div><!-- ★詳細 -->
+          <div class="wk-title">K様邸 屋根全面塗装</div>
+          <div class="wk-sub">スレート屋根 / フッ素系塗料 / 120㎡</div>
         </div>
       </article>
+      <!-- 【画像③】外壁塗装 -->
       <article class="wk-card rev d1">
         <div class="wk-bg wbg2">
-          <!-- <img class="wk-img" src="images/works-wall-01.jpg" alt="T様邸 モルタル外壁塗装の施工後写真"> -->
-          <div class="wk-icon" aria-hidden="true"><span class="wi">🏗️</span><span class="wl">WALL</span></div>
+          <img class="wk-img" src="images/240_F_495890739_imCGrUsEqEUGyi8NXfnI0trorE49Pqal.jpg" alt="T様邸 外壁塗装">
         </div>
         <div class="wk-overlay">
           <span class="wk-tag">外壁塗装</span>
@@ -451,10 +509,10 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
           <div class="wk-sub">モルタル外壁 / シリコン塗料</div>
         </div>
       </article>
+      <!-- 【画像④】防水工事 -->
       <article class="wk-card rev d2">
         <div class="wk-bg wbg3">
-          <!-- <img class="wk-img" src="images/works-waterproof-01.jpg" alt="マンション屋上ウレタン防水の施工写真"> -->
-          <div class="wk-icon" aria-hidden="true"><span class="wi">💧</span><span class="wl">WATERPROOF</span></div>
+          <img class="wk-img" src="images/240_F_608544274_8QWqVy8zvC5oTipmq5txwWczwrfxI1uT.jpg" alt="マンション屋上防水">
         </div>
         <div class="wk-overlay">
           <span class="wk-tag">防水工事</span>
@@ -464,12 +522,12 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
       </article>
     </div>
 
-    <!-- 2行目：3枚（16:9） -->
+    <!-- 2行目：3枚 -->
     <div class="wk-row-2">
+      <!-- 【画像⑤】コーキング -->
       <article class="wk-card rev">
         <div class="wk-bg wbg4">
-          <!-- <img class="wk-img" src="images/works-caulking-01.jpg" alt="S様邸 サイディング目地コーキング打ち替え施工写真"> -->
-          <div class="wk-icon" aria-hidden="true"><span class="wi">🔧</span><span class="wl">CAULKING</span></div>
+          <img class="wk-img" src="images/240_F_478233385_G1OgJ8EjM5cR5OUgYyX33NgcJpBMDad6.jpg" alt="S様邸 コーキング打ち替え">
         </div>
         <div class="wk-overlay">
           <span class="wk-tag">コーキング</span>
@@ -477,10 +535,10 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
           <div class="wk-sub">サイディング目地 / 変成シリコン / 鹿屋市</div>
         </div>
       </article>
+      <!-- 【画像⑥】各種吹付 -->
       <article class="wk-card rev d1">
         <div class="wk-bg wbg5">
-          <!-- <img class="wk-img" src="images/works-spray-01.jpg" alt="倉庫外壁の吹付塗装施工写真"> -->
-          <div class="wk-icon" aria-hidden="true"><span class="wi">💨</span><span class="wl">SPRAY</span></div>
+          <img class="wk-img" src="images/240_F_282453157_9H4BdhlIxVdhiPdXsZTpFlt4OnOgn3xm.jpg" alt="倉庫 外壁吹付塗装">
         </div>
         <div class="wk-overlay">
           <span class="wk-tag">各種吹付</span>
@@ -488,10 +546,10 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
           <div class="wk-sub">鉄骨造 / ラッカー吹付 / 200㎡</div>
         </div>
       </article>
+      <!-- 【画像⑦】リフォーム -->
       <article class="wk-card rev d2">
         <div class="wk-bg wbg6">
-          <!-- <img class="wk-img" src="images/works-reform-01.jpg" alt="N様邸 屋根・外壁セット工事の施工後写真（鹿児島市内）"> -->
-          <div class="wk-icon" aria-hidden="true"><span class="wi">🏘️</span><span class="wl">RENOVATION</span></div>
+          <img class="wk-img" src="images/240_F_595454703_mzPuC3KjFIcqNYzUXTbizYiwJbWMVMLH.jpg" alt="N様邸 屋根・外壁セット工事">
         </div>
         <div class="wk-overlay">
           <span class="wk-tag">リフォーム</span>
@@ -504,22 +562,25 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </section>
 
 
-<!-- ============================================================ ABOUT ============================================================
-     ★左側に写真: about-visual-inner 内のコメントを外す
-       <img class="about-photo" src="images/company.jpg" alt="コダマ建築塗装 職人による外壁塗装施工風景">
-     ★会社説明文 → <p class="rev d2"> の中を書き換え
+<!-- ============================================================
+  会社紹介セクション
+
+  【画像⑧：会社紹介写真】
+  下の src="images/○○.jpg" の「○○」を書き換えてください。
+  推奨：笑顔の職人さん、または外壁作業中の写真
 ============================================================ -->
 <section id="about" class="sec about-bg" aria-labelledby="about-heading">
   <div class="section-inner">
     <div class="about-inner">
       <div class="about-visual rev">
         <div class="about-visual-inner">
-          <!-- <img class="about-photo" src="images/company.jpg" alt="コダマ建築塗装の職人による外壁塗装施工風景"> -->
-          <div class="about-bigtext" aria-hidden="true">塗装<br>工事</div>
+          <img class="about-photo" src="images/240_F_754070389_0VurvizYuk9tWJszDXj95YE6rlfahrOb.jpg" alt="コダマ建築塗装の職人による外壁塗装施工風景">
+          <!-- 写真がない場合は上の行を削除して、下の行のコメントを外してください -->
+          <!-- <div class="about-bigtext" aria-hidden="true">塗装<br>工事</div> -->
         </div>
         <div class="about-tag-box">
-          <p>経験豊富な職人が</p><!-- ★変更可 -->
-          <strong>丁寧施工</strong><!-- ★変更可 -->
+          <p>経験豊富な職人が</p>
+          <strong>丁寧施工</strong>
         </div>
       </div>
       <div class="about-text">
@@ -528,7 +589,7 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
         <p class="rev d2">
           コダマ建築塗装は、鹿児島県を中心に総合塗装工事を手掛けています。
           お客様の大切な建物を守るため、一つひとつの工事に真剣に向き合い、
-          丁寧な施工と誠実な対応で地域の皆様に信頼されています。<!-- ★変更してください -->
+          丁寧な施工と誠実な対応で地域の皆様に信頼されています。
         </p>
         <div class="apoint rev d2">
           <div class="apoint-icon" aria-hidden="true">💰</div>
@@ -548,7 +609,7 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </section>
 
 
-<!-- ============================================================ SMALL WORKS ============================================================ -->
+<!-- 小規模工事 -->
 <section id="small" class="sec small-bg" aria-labelledby="small-heading">
   <div class="section-inner">
     <p class="section-label rev">Small Works</p>
@@ -566,6 +627,7 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </section>
 
 
+<!-- 無料見積もり帯 -->
 <div id="estimate" class="estimate-bg">
   <h2>無料お見積もり<br>受付中</h2>
   <p>まずはお気軽にご連絡ください</p>
@@ -573,18 +635,23 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 </div>
 
 
-<!-- ============================================================ CONTACT ============================================================
-     ★formspree設定: <form id="contactForm" action="https://formspree.io/f/★ID★" method="POST" novalidate> に変更
+<!-- ============================================================
+  お問い合わせフォーム（mailto方式）
+  ★ 送信先メールアドレスを変更してください：
+    下の MAIL_TO の値を会社のメールアドレスに書き換えるだけです
 ============================================================ -->
 <div id="contact" class="contact-bg">
   <div class="contact-wrap">
     <p class="section-label rev">Contact</p>
     <h2 class="section-title rev d1">お問い合わせ</h2>
-    <p class="contact-lead rev d2">お見積もりのご依頼・ご相談はこちらからどうぞ。<br>内容を確認の上、担当者よりご連絡いたします。</p>
+    <p class="contact-lead rev d2">
+      お見積もりのご依頼・ご相談はこちらからどうぞ。<br>
+      送信ボタンを押すとメールアプリが開き、入力内容がそのまま送信されます。
+    </p>
     <form id="contactForm" class="rev d3" novalidate>
       <div class="fgroup"><label for="name">お名前 <em>必須</em></label><input type="text" id="name" name="name" placeholder="山田 太郎" required autocomplete="name"></div>
       <div class="fgroup"><label for="tel">電話番号 <em>必須</em></label><input type="tel" id="tel" name="tel" placeholder="090-0000-0000" required autocomplete="tel"></div>
-      <div class="fgroup"><label for="email">メールアドレス</label><input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="email"></div>
+      <div class="fgroup"><label for="email">返信用メールアドレス</label><input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="email"></div>
       <div class="fgroup">
         <label for="service">ご希望の工事内容</label>
         <select id="service" name="service">
@@ -596,16 +663,16 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
       </div>
       <div class="fgroup"><label for="address">ご住所・建物所在地</label><input type="text" id="address" name="address" placeholder="例：鹿児島県鹿屋市〇〇町" autocomplete="street-address"></div>
       <div class="fgroup"><label for="message">ご質問・ご要望</label><textarea id="message" name="message" placeholder="お気軽にご記入ください。例）築20年の自宅の外壁塗装を検討しています。"></textarea></div>
-      <button type="submit" class="f-submit">送　信　す　る</button>
-      <p class="f-note">※ お見積もりは完全無料です。お気軽にどうぞ。</p>
+      <button type="submit" class="f-submit">メールアプリで送信する　→</button>
+      <p class="f-note">※ ボタンを押すとメールアプリが開きます。内容を確認して「送信」してください。</p>
     </form>
-    <div id="f-success" role="alert">✓ お問い合わせを受け付けました。<br>担当者よりご連絡いたします。</div>
   </div>
 </div>
 
 
-<!-- ============================================================ FOOTER ============================================================
-     ★住所・電話番号・営業時間を正確に入力してください（SEO・Googleマップに直結）
+<!-- ============================================================
+  フッター
+  ★住所・電話番号を正確に入力してください
 ============================================================ -->
 <footer>
   <div class="footer-inner">
@@ -628,12 +695,12 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
     </div>
     <address class="footer-address">
       <strong>コダマ建築塗装</strong>
-      〒893-0000<br><!-- ★郵便番号 -->
-      鹿児島県鹿屋市〇〇町〇〇番地<br><!-- ★住所 -->
+      〒893-0000<br>
+      鹿児島県鹿屋市〇〇町〇〇番地<br>
       <br>
-      <strong>TEL：</strong><a href="tel:0994000000">0994-XX-XXXX</a><br><!-- ★電話番号 -->
-      <strong>営業時間：</strong>平日 8:00〜18:00 / 土曜 8:00〜17:00<br><!-- ★営業時間 -->
-      <strong>定休日：</strong>日曜・祝日<!-- ★定休日 -->
+      <strong>TEL：</strong><a href="tel:0994000000">0994-XX-XXXX</a><br>
+      <strong>営業時間：</strong>平日 8:00〜18:00 / 土曜 8:00〜17:00<br>
+      <strong>定休日：</strong>日曜・祝日
     </address>
   </div>
   <div class="footer-bottom">
@@ -644,9 +711,9 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
 
 
 <script>
-/* ============================================================
-   JavaScript（js/main.js と同じ内容）
-============================================================ */
+/* ========================================
+   JavaScript（このまま触らなくてOKです）
+======================================== */
 (function () {
   'use strict';
 
@@ -713,13 +780,48 @@ footer { background: #050505; padding: 56px 48px 28px; border-top: 1px solid rgb
   }, { threshold: 0.08 });
   revEls.forEach(function (el) { revObs.observe(el); });
 
-  var form    = document.getElementById('contactForm');
-  var success = document.getElementById('f-success');
+  var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      form.style.display    = 'none';
-      success.style.display = 'block';
+
+      /* ★★★ 送信先メールアドレスをここに入力してください ★★★ */
+      var MAIL_TO = 'chillaut89@gmail.com';
+
+      /* 各フィールドの値を取得 */
+      var name    = document.getElementById('name').value.trim();
+      var tel     = document.getElementById('tel').value.trim();
+      var email   = document.getElementById('email').value.trim();
+      var service = document.getElementById('service').value;
+      var address = document.getElementById('address').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      /* 必須チェック */
+      if (!name) { alert('お名前を入力してください。'); return; }
+      if (!tel)  { alert('電話番号を入力してください。'); return; }
+
+      /* メール件名 */
+      var subject = '【お問い合わせ】コダマ建築塗装 / ' + name + ' 様';
+
+      /* メール本文を組み立て */
+      var body =
+        'コダマ建築塗装 お問い合わせフォーム\n' +
+        '========================================\n\n' +
+        '【お名前】\n' + name + '\n\n' +
+        '【電話番号】\n' + tel + '\n\n' +
+        '【返信用メールアドレス】\n' + (email || '未記入') + '\n\n' +
+        '【ご希望の工事内容】\n' + (service || '未選択') + '\n\n' +
+        '【ご住所・建物所在地】\n' + (address || '未記入') + '\n\n' +
+        '【ご質問・ご要望】\n' + (message || '未記入') + '\n\n' +
+        '========================================\n' +
+        'このメールはお問い合わせフォームから自動生成されました。';
+
+      /* mailtoリンクを生成してメールアプリを起動 */
+      var mailto = 'mailto:' + MAIL_TO
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body='    + encodeURIComponent(body);
+
+      window.location.href = mailto;
     });
   }
 })();
